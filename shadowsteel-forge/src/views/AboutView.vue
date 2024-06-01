@@ -1,5 +1,7 @@
+<script setup>
+import TheTeam from '../components/TheTeam.vue'
+</script>
+
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <TheTeam />
 </template>

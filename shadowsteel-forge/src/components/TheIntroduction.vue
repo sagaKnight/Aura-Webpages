@@ -3,8 +3,7 @@
 </script>
 
 <template>
-  <!--Start of Banner + New Container-->
-  <div class="container border-bottom p-3 border-black">
+  <div class="container p-3 border-black">
     <div class="row p-3 justify-content-center">
       <img src="../assets/images/forge.jpg" class="forge-image img-fluid col-7 col-sm-7" alt="forge image" />
       <div class="col-5 col-sm-5 align-self-center text-center">

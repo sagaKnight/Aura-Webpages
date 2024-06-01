@@ -1,6 +1,6 @@
 <template>
     <!--Start of Product Showcase + New Container-->
-  <div class="container border-bottom p-3 border-black">
+  <div class="container border-bottom border-top p-3 border-black">
     <div class="row">
       <img src="../assets/images/seiya.jpg" alt="seiya sword" class="sword-image" />
       <div class="mt-2">

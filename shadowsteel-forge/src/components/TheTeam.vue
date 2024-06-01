@@ -1,11 +1,10 @@
 <template>
-  <!--Start of Staff Section + New Container -->
-  <div class="container border-bottom p-3 border-black">
+  <div class="container">
     <div class="row p-3 text-center">
       <h3>The Faces Behind</h3>
     </div>
-    <div class="row">
-      <div class="col-12 col-sm-6">
+    <div class="row mx-auto">
+      <div class="col-12 col-lg-4 col-sm-6">
         <img src="../assets/images/gouvea.png" alt="gouvea" class="profile rounded p-2">
         <h3>Gouvea</h3>
         <h4>Lead Designer. Marketer. Father.</h4>
@@ -17,7 +16,7 @@
           arsenal remains at the forefront of technological advancement.
         </p>
       </div>
-      <div class="col-12 col-sm-6">
+      <div class="col-12 col-lg-4 col-sm-6">
         <img src="../assets/images/seetelo.png" alt="seetelo" class="profile rounded">
         <h3>Seetelo</h3>
         <h4>Lead Blacksmith. Learner. Explorer.</h4>

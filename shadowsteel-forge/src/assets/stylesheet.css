@@ -1,12 +1,3 @@
-.logo {
-    max-height: 50px;
-    max-width: 50px;
-}
-
-.banner {
-    margin-top: 70px;
-}
-
 .d-flex ul {
     list-style: none;
     margin: 0px;
@@ -35,9 +26,4 @@
 
 .profile {
     max-width: 100%;
-}
-
-.footer {
-    background-color: black;
-    color: #FBFBFB;
 }
