@@ -1,0 +1,43 @@
+.logo {
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.banner {
+    margin-top: 70px;
+}
+
+.d-flex ul {
+    list-style: none;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.d-flex li {
+    list-style: none;
+}
+
+.d-flex p {
+    margin: 0px;
+}
+
+.forge-image {
+    max-width: 100%;
+}
+
+.sword-image {
+    max-width: 100%;
+}
+
+.seiya-features {
+    max-width: 100%;
+}
+
+.profile {
+    max-width: 100%;
+}
+
+.footer {
+    background-color: black;
+    color: #FBFBFB;
+}
