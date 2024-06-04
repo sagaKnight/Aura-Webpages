@@ -1,17 +1,3 @@
-.d-flex ul {
-    list-style: none;
-    margin: 0px;
-    cursor: pointer;
-}
-
-.d-flex li {
-    list-style: none;
-}
-
-.d-flex p {
-    margin: 0px;
-}
-
 .forge-image {
     max-width: 100%;
 }
@@ -26,4 +12,12 @@
 
 .profile {
     max-width: 100%;
+}
+
+.profile-container {
+    max-width: 1000px;
+}
+
+.login-form {
+    max-width: 600px;
 }
