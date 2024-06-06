@@ -5,7 +5,7 @@
     </div>
     <div class="row mx-auto">
       <div class="col-12 col-lg-6 col-sm-6">
-        <img src="../assets/images/gouvea.png" alt="gouvea" class="profile rounded p-2">
+        <img src="../assets/images/owners/gouvea.png" alt="gouvea" class="profile rounded p-2">
         <h3>Gouvea</h3>
         <h4>Lead Designer. Marketer. Father.</h4>
         <p>
@@ -17,7 +17,7 @@
         </p>
       </div>
       <div class="col-12 col-md-6 col-sm-6">
-        <img src="../assets/images/seetelo.png" alt="seetelo" class="profile rounded">
+        <img src="../assets/images/owners/seetelo.png" alt="seetelo" class="profile rounded">
         <h3>Seetelo</h3>
         <h4>Lead Blacksmith. Learner. Explorer.</h4>
         <p>

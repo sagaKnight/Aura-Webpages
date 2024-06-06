@@ -1,11 +1,11 @@
 <script setup>
 import TheIntroduction from '../components/TheIntroduction.vue'
-import OnDisplay from '../components/OnDisplay.vue'
+import TheHomepageDisplay from '../components/TheHomepageDisplay.vue'
 </script>
 
 <template>
   <main>
     <TheIntroduction />
-    <OnDisplay />
+    <TheHomepageDisplay />
   </main>
 </template>

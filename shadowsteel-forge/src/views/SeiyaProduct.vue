@@ -1,5 +1,5 @@
 <script setup>
-import SeiyaSword from '../components/SeiyaSword.vue'
+import SeiyaSword from '../components/tochange.vue'
 </script>
 
 <template>

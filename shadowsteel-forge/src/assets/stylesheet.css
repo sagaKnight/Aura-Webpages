@@ -1,23 +1,8 @@
-.forge-image {
+img {
     max-width: 100%;
 }
 
-.sword-image {
-    max-width: 100%;
-}
-
-.seiya-features {
-    max-width: 100%;
-}
-
-.profile {
-    max-width: 100%;
-}
-
-.profile-container {
-    max-width: 1000px;
-}
-
-.login-form {
-    max-width: 600px;
+.collection-header {
+    color: black;
+    text-decoration: none;
 }
