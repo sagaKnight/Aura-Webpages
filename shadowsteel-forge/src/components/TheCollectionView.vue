@@ -5,7 +5,7 @@
         <div class="container text-center">
             <div class="row mt-3 d-flex justify-content-center align-items-center mb-1"> 
                 <div class="col-8 col-xl-5 col-lg-6 col-md-7 col-sm-7">
-                    <img :src="require(`../assets/images/collections/${content.headerImage}`)">
+                    <img :src="ImageSrc(content)" alt="Header Image">
                 </div>
                 <div class="col-10 col-xl-5 col-lg-6 col-md-4 col-sm-5">
                     <h1>{{ content.collectionHeading }}</h1>
@@ -60,7 +60,12 @@
     computed: {
       collectionContent() {
         return this.collectionsJson[this.$route.params.collection];
-      }
+        },
+    },
+    methods: {
+        imageSrc(content) {
+            return new URL(`../assets/images/collections/adrianepage/${content.headerImage}.jpg`, import.meta.url).href;
+        }
     }
   }
   </script>
