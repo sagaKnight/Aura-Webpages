@@ -19,9 +19,11 @@
                         Releases
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <RouterLink to="/seiya" class="dropdown-item">Seiya Sword</RouterLink>
-                        <RouterLink to="/" class="dropdown-item">Product 1</RouterLink>
-                        <RouterLink to="/" class="dropdown-item">Product 1</RouterLink>
+                        <RouterLink to="/collection/adriane" class="dropdown-item">Adriane</RouterLink>
+                        <RouterLink to="/collection/mike" class="dropdown-item">Mike</RouterLink>
+                        <RouterLink to="/collection/stow" class="dropdown-item">Stow</RouterLink>
+                        <RouterLink to="/collection/vow" class="dropdown-item">Vow</RouterLink>
+                        <RouterLink to="/collection/kelly" class="dropdown-item">Kelly</RouterLink>
                     </div>
                 </li>
             </ul>

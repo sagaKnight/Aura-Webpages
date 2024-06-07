@@ -1,31 +1,36 @@
 <template>
   <div class="container profile-container">
     <div class="row p-3 text-center">
-      <h3>The Faces Behind</h3>
+      <h3>The Minds Behind</h3>
     </div>
-    <div class="row mx-auto">
-      <div class="col-12 col-lg-6 col-sm-6">
+    <div class="row mx-auto d-flex justify-content-center">
+      <div class="col-9 col-xl-5 col-lg-6 col-md-6 col-sm-10 mb-5">
         <img src="../assets/images/owners/gouvea.png" alt="gouvea" class="profile rounded p-2">
         <h3>Gouvea</h3>
         <h4>Lead Designer. Marketer. Father.</h4>
         <p>
-          Gouvea is our visionary weapon designer, blending artistry with
-          precision engineering. With a keen eye for innovation and safety, he
-          crafts weapons that redefine industry standards. With years of
-          expertise and a passion for pushing boundaries, Gouvea ensures our
-          arsenal remains at the forefront of technological advancement.
+          Introducing Gouvea, the creative force behind Aura, 
+          a brand that epitomizes casual luxury streetwear. 
+          With an innate sense of style and a relentless pursuit of 
+          excellence, Gouvea infuses every design with a distinctive 
+          blend of sophistication and urban edge. Drawing inspiration 
+          from the pulse of city life and the allure of high fashion, 
+          Gouvea's vision for Aura transcends conventional boundaries,
+          offering a bold reinterpretation of streetwear culture. 
         </p>
       </div>
-      <div class="col-12 col-md-6 col-sm-6">
+      <div class="col-9 col-xl-5 col-lg-6 col-md-6 col-sm-10">
         <img src="../assets/images/owners/seetelo.png" alt="seetelo" class="profile rounded">
         <h3>Seetelo</h3>
-        <h4>Lead Blacksmith. Learner. Explorer.</h4>
+        <h4>Head of Production. Learner. Salesman.</h4>
         <p>
-          Seetelo, our esteemed lead blacksmith, embodies the artistry and
-          mastery of metallurgy. With a hammer as his scepter and fire as his
-          forge. His meticulous craftsmanship and unwavering dedication ensure
-          that every piece bearing his mark is not just a tool but a testament
-          to the enduring legacy of craftsmanship.
+          Meet Seetelo, our Head of Production, a versatile leader 
+          driven by a passion for innovation and continuous learning.
+          With a background in sales, Seetelo brings a fresh 
+          perspective to production, constantly seeking ways to 
+          improve efficiency and drive results. Under Seetelo's 
+          guidance, our production team is primed for success, 
+          poised to grow and excel in an ever-evolving industry.
         </p>
       </div>
     </div>

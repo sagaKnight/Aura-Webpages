@@ -1,0 +1,31 @@
+{
+  "adriane": [
+    {
+        "headerImage": "adrianepage/header-image.jpg",
+        "collectionHeading": "The Adriane Collection",
+        "collectionDesc": "Adriane Collection embodies contemporary streetwear, merging minimalist style with luxury craftsmanship. It offers a curated selection of timeless pieces crafted from premium materials for unparalleled comfort and durability. With clean lines and neutral tones, the collection exudes understated sophistication, perfect for elevating any wardrobe with its versatile and refined appeal.",
+        "items": [
+          {
+            "itemImage": "./assets/images/collections/adrianepage/item1.jpg",
+            "itemName": "Adriane T-Shirt"
+          },
+          {
+            "itemImage": "./assets/images/collections/adrianepage/item2.jpg",
+            "itemName": "Adriane Hoodie"
+          },
+          {
+            "itemImage": "./assets/images/collections/adrianepage/item3.jpg",
+            "itemName": "Adriane Joggers"
+          },
+          {
+            "itemImage": "./assets/images/collections/adrianepage/item4.jpg",
+            "itemName": "Adriane Cap"
+          }
+        ]
+      }      
+  ],
+  "mike": [
+    { "title": "Product 1", "description": "Description for Product 1 but for mike" },
+    { "title": "Product 2", "description": "Description for Product 2" }
+  ]
+}
