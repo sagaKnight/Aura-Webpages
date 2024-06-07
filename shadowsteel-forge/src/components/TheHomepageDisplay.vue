@@ -41,7 +41,7 @@
         </div>
         <div class="row text-white p-2 d-flex justify-content-center">
         <div class="col-5 col-xl-4 col-lg-4 p-1 col-md-5 col-sm-5 text-black rounded mx-1">
-                <RouterLink class="collection-header" to="/">
+                <RouterLink class="collection-header" to="/collection/adriane">
                     <h3>The Adriane Collection.</h3>
                     <img src="../assets/images/collections/adriane-collection.jpg" alt="stow image" class="rounded" />
                 </RouterLink>

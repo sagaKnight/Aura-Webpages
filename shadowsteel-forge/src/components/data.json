@@ -1,31 +1,119 @@
 {
     "adriane": [
-        {
-            "headerImage": "header-image.jpg",
-            "collectionHeading": "The Adriane Collection",
-            "collectionDesc": "Adriane Collection embodies contemporary streetwear, merging minimalist style with luxury craftsmanship. It offers a curated selection of timeless pieces crafted from premium materials for unparalleled comfort and durability. With clean lines and neutral tones, the collection exudes understated sophistication, perfect for elevating any wardrobe with its versatile and refined appeal.",
-            "items": [
-                {
-                    "itemImage": "item1.jpg",
-                    "itemName": "Adriane T-Shirt",
-                    "itemPrice": "$700 USD"
-                },
-                {
-                    "itemImage": "item2.jpg",
-                    "itemName": "Adriane Hoodie",
-                    "itemPrice": "$580 USD"
-                },
-                {
-                    "itemImage": "item3.jpg",
-                    "itemName": "Adriane Joggers",
-                    "itemPrice": "$780 USD"
-                },
-                {
-                    "itemImage": "item4.jpg",
-                    "itemName": "Adriane Polo",
-                    "itemPrice": "$210 USD"
-                }
-            ]
-        }
+      {
+        "headerImage": "header-image.jpg",
+        "collectionHeading": "The Adriane Collection",
+        "collectionDesc": "Adriane Collection embodies contemporary streetwear, merging minimalist style with luxury craftsmanship. It offers a curated selection of timeless pieces crafted from premium materials for unparalleled comfort and durability. With clean lines and neutral tones, the collection exudes understated sophistication, perfect for elevating any wardrobe with its versatile and refined appeal.",
+        "items": [
+          {
+            "itemImage": "item1.jpg",
+            "itemName": "Adriane T-Shirt",
+            "itemPrice": "$700 USD"
+          },
+          {
+            "itemImage": "item2.jpg",
+            "itemName": "Adriane Hoodie",
+            "itemPrice": "$580 USD"
+          },
+          {
+            "itemImage": "item3.jpg",
+            "itemName": "Adriane Joggers",
+            "itemPrice": "$780 USD"
+          },
+          {
+            "itemImage": "item4.jpg",
+            "itemName": "Adriane Polo",
+            "itemPrice": "$210 USD"
+          }
+        ]
+      }
+    ],
+    "mike": [
+      {
+        "headerImage": "",
+        "collectionHeading": "Mike",
+        "collectionDesc": "",
+        "items": [
+          {
+            "itemImage": "item1.jpg",
+            "itemName": "",
+            "itemPrice": ""
+          },
+          {
+            "itemImage": "item2.jpg",
+            "itemName": "",
+            "itemPrice": ""
+          },
+          {
+            "itemImage": "item3.jpg",
+            "itemName": "",
+            "itemPrice": ""
+          },
+          {
+            "itemImage": "item4.jpg",
+            "itemName": "",
+            "itemPrice": ""
+          }
+        ]
+      }
+    ],
+    "stow": [
+      {
+        "headerImage": "",
+        "collectionHeading": "",
+        "collectionDesc": "",
+        "items": [
+          {
+            "itemImage": "item1.jpg",
+            "itemName": "",
+            "itemPrice": ""
+          },
+          {
+            "itemImage": "item2.jpg",
+            "itemName": "",
+            "itemPrice": ""
+          },
+          {
+            "itemImage": "item3.jpg",
+            "itemName": "",
+            "itemPrice": ""
+          },
+          {
+            "itemImage": "item4.jpg",
+            "itemName": "",
+            "itemPrice": ""
+          }
+        ]
+      }
+    ],
+    "von": [
+      {
+        "headerImage": "",
+        "collectionHeading": "",
+        "collectionDesc": "",
+        "items": [
+          {
+            "itemImage": "item1.jpg",
+            "itemName": "",
+            "itemPrice": ""
+          },
+          {
+            "itemImage": "item2.jpg",
+            "itemName": "",
+            "itemPrice": ""
+          },
+          {
+            "itemImage": "item3.jpg",
+            "itemName": "",
+            "itemPrice": ""
+          },
+          {
+            "itemImage": "item4.jpg",
+            "itemName": "",
+            "itemPrice": ""
+          }
+        ]
+      }
     ]
-}
+  }
+  

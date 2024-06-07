@@ -37,17 +37,27 @@
   import data from '../components/data.json'
   
   export default {
+    data() {
+        return {
+            collectionName: this.$route.params.collection
+        }
+    },
     computed: {
       collectionJSON() {
         return data[this.$route.params.collection];
       },
     },
-    methods: {
-    //Overly complicated solution to get images working here...
-    getImageSrc(JSONobject, imageName) {
-        return new URL(`../assets/images/collections/adrianepage/${JSONobject[imageName]}`, import.meta.url).href;
+    watch: {
+    '$route'(to) {
+      this.collectionName = to.params.collection;
         }
-    }
+    },
+    methods: {
+    getImageSrc(JSONobject, imageName) {
+        const pagePath = `${this.collectionName}page`
+        return new URL(`../assets/images/collections/${pagePath}/${JSONobject[imageName]}`, import.meta.url).href;
+        }
+    },
   }
   </script>
   
