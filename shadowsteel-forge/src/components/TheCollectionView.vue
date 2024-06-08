@@ -5,7 +5,7 @@
           <div class="container text-center">
             <div class="row mt-3 d-flex justify-content-center align-items-center mb-1"> 
               <div class="col-8 col-xl-5 col-lg-6 col-md-7 col-sm-7">
-                <img :src="getImageSrc(content, 'headerImage')" alt="Header Image" class="rounded">
+                <img :src="getImageSrc(content, 'headerImage')" alt="Header Image" class="rounded product-collection-img">
               </div>
               <div class="col-10 col-xl-5 col-lg-6 col-md-5 col-sm-5">
                 <h1>{{ content.collectionHeading }}</h1>
@@ -17,7 +17,7 @@
           </div>
           <div class="container text-center mt-5">
             <div class="row  d-flex justify-content-center align-items-center">
-              <div class="col-4 col-xl-2 col-md-3 bg-dark rounded text-white mb-2"> 
+              <div class="col-4 col-xl-2 col-md-3 mb-2"> 
                 <h3>The Pieces.</h3>
               </div>
             </div>

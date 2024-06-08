@@ -6,3 +6,15 @@ img {
     color: black;
     text-decoration: none;
 }
+
+.home-collection-img {
+    max-height: 300px; 
+    object-fit: cover;
+    width: 100%;
+  }
+
+.product-collection-img {
+    max-height: 400px; 
+    object-fit: cover;
+    width: 100%;
+  }

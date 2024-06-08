@@ -4,8 +4,8 @@
 
 <template>
   <div class="container">
-    <div class="row px-5 mt-3 justify-content-center">
-      <div class="col-12 col-xl-5 col-lg-8 col-md-10 col-sm-12 position-relative">
+    <div class="row px-5 mt-1 justify-content-center">
+      <div class="col-12 col-xl-6 col-lg-8 col-md-10 col-sm-12 position-relative">
         <RouterLink to="/collection/kelly">
           <img src="../assets/images/intro-header-image.jpg" class="rounded" alt="header" />
         </RouterLink>
