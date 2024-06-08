@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import CollectionView from '../views/CollectionView.vue'
+import WaitlistView from '@/views/WaitlistView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -28,6 +29,11 @@ const router = createRouter({
       path: '/collection/:collection',
       name: 'collection',
       component: CollectionView
+    },
+    {
+      path: '/waitlist-form',
+      name: 'waitlist-form',
+      component: WaitlistView
     }
   ],
 })

@@ -18,7 +18,9 @@
         <h1>Aura</h1>
         <h2>Relaxed. Effortless. Prepared.</h2>
         <h6>Limited. Raffle Entry.</h6>
-        <button class="btn btn-dark mt-2">Join the Waitlist</button>
+        <RouterLink to="/waitlist-form">
+          <button class="btn btn-dark mt-2">Join the Waitlist</button>
+        </RouterLink>
       </div>
     </div>
   </div>
