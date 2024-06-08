@@ -22,7 +22,7 @@
                         <RouterLink to="/collection/adriane" class="dropdown-item">Adriane</RouterLink>
                         <RouterLink to="/collection/mike" class="dropdown-item">Mike</RouterLink>
                         <RouterLink to="/collection/stow" class="dropdown-item">Stow</RouterLink>
-                        <RouterLink to="/collection/vow" class="dropdown-item">Vow</RouterLink>
+                        <RouterLink to="/collection/von" class="dropdown-item">Von</RouterLink>
                         <RouterLink to="/collection/kelly" class="dropdown-item">Kelly</RouterLink>
                     </div>
                 </li>

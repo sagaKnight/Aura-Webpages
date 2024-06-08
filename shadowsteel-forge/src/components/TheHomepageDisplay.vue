@@ -2,7 +2,7 @@
     <div class="container-fluid p-3 position-relative">
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-xl-9 col-lg-10 col-md-11 col-sm-12">
-                <RouterLink to="/">
+                <RouterLink to="/collection/von">
                     <img src="../assets/images/collections/von-collection.jpg" alt="main collection image"
                         class="on-display-image rounded" />
                 </RouterLink>
@@ -25,25 +25,25 @@
                 <h1>Previous Releases</h1>
             </div>
         </div>
-        <div class="row text-white p-2 d-flex justify-content-center">
-            <div class="col-5 col-xl-4 col-lg-4 col-md-5 col-sm-5 p-1 text-black rounded mx-1">
-                <RouterLink class="collection-header" to="/">
-                    <h3>The Michael Collection.</h3>
-                    <img src="../assets/images/collections/mike-collection.jpg" alt="michael image" class="rounded" />
+        <div class="row text-white d-flex justify-content-center bg-danger">
+            <div class="col-5 col-xl-4 col-lg-4 col-md-5 col-sm-5text-black rounded mx-1">
+                <RouterLink class="collection-header" to="/collection/mike">
+                    <h3>The Mike Collection.</h3>
+                    <img src="../assets/images/collections/mike-collection.jpg" alt="michael image" class="rounded border border-black h-50 img-fluid" />
                 </RouterLink>
             </div>
         <div class="col-5 col-xl-4 col-lg-4 p-1 col-md-5 col-sm-5 text-black rounded mx-1">
-                <RouterLink class="collection-header" to="/">
+                <RouterLink class="collection-header" to="/collection/stow">
                     <h3>The Stow Collection.</h3>
-                    <img src="../assets/images/collections/stow-collection.jpg" alt="stow image" class="rounded" />
+                    <img src="../assets/images/collections/stow-collection.jpg" alt="stow image" class="rounded border border-black h-50 img-fluid" />
                 </RouterLink>
             </div>
         </div>
-        <div class="row text-white p-2 d-flex justify-content-center">
+        <div class="row text-white d-flex justify-content-center bg-primary">
         <div class="col-5 col-xl-4 col-lg-4 p-1 col-md-5 col-sm-5 text-black rounded mx-1">
                 <RouterLink class="collection-header" to="/collection/adriane">
                     <h3>The Adriane Collection.</h3>
-                    <img src="../assets/images/collections/adriane-collection.jpg" alt="stow image" class="rounded" />
+                    <img src="../assets/images/collections/adriane-collection.jpg" alt="stow image" class="rounded border border-black h-50 img-fluid" />
                 </RouterLink>
             </div>
         </div>

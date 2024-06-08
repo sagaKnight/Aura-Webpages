@@ -6,7 +6,7 @@
   <div class="container">
     <div class="row px-5 mt-3 justify-content-center">
       <div class="col-12 col-xl-7 col-lg-8 col-md-10 col-sm-12">
-        <RouterLink to="/">
+        <RouterLink to="/collection/kelly">
           <img src="../assets/images/header-image.jpg" class="rounded" alt="header" />
         </RouterLink>
         <h6>Kelly Collection.</h6>

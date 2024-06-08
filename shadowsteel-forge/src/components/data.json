@@ -4,116 +4,150 @@
         "headerImage": "header-image.jpg",
         "collectionHeading": "The Adriane Collection",
         "collectionDesc": "Adriane Collection embodies contemporary streetwear, merging minimalist style with luxury craftsmanship. It offers a curated selection of timeless pieces crafted from premium materials for unparalleled comfort and durability. With clean lines and neutral tones, the collection exudes understated sophistication, perfect for elevating any wardrobe with its versatile and refined appeal.",
+        "availableBtn": "Not Available",
         "items": [
           {
             "itemImage": "item1.jpg",
             "itemName": "Adriane T-Shirt",
-            "itemPrice": "$700 USD"
+            "itemPrice": "$1450 USD"
           },
           {
             "itemImage": "item2.jpg",
             "itemName": "Adriane Hoodie",
-            "itemPrice": "$580 USD"
+            "itemPrice": "$1300 USD"
           },
           {
             "itemImage": "item3.jpg",
             "itemName": "Adriane Joggers",
-            "itemPrice": "$780 USD"
+            "itemPrice": "$1200 USD"
           },
           {
             "itemImage": "item4.jpg",
             "itemName": "Adriane Polo",
-            "itemPrice": "$210 USD"
+            "itemPrice": "$1350 USD"
           }
         ]
       }
     ],
     "mike": [
       {
-        "headerImage": "",
-        "collectionHeading": "Mike",
-        "collectionDesc": "",
+        "headerImage": "header-image.jpg",
+        "collectionHeading": "The Mike Collection",
+        "collectionDesc": "The Mike Collection celebrates individuality and rebellion with bold colors, eclectic patterns, and distressed textures. Each piece features oversized fits, rugged fabrics, and eye-catching graphics, perfect for those who dare to stand out. Embrace chaos and unrestrained expression with the Mike Collection.",
+        "availableBtn": "Not Available",
         "items": [
           {
             "itemImage": "item1.jpg",
-            "itemName": "",
-            "itemPrice": ""
+            "itemName": "Mike Psycho Shirt",
+            "itemPrice": "$1550 USD"
           },
           {
             "itemImage": "item2.jpg",
-            "itemName": "",
-            "itemPrice": ""
+            "itemName": "Mike My Muse Shirt",
+            "itemPrice": "$1050 USD"
           },
           {
             "itemImage": "item3.jpg",
-            "itemName": "",
-            "itemPrice": ""
+            "itemName": "Mike Hello Pam Sweatshirt",
+            "itemPrice": "$1950 USD"
           },
           {
             "itemImage": "item4.jpg",
-            "itemName": "",
-            "itemPrice": ""
+            "itemName": "Mike Caramel Chow Pants",
+            "itemPrice": "$2000 USD"
           }
         ]
       }
     ],
     "stow": [
       {
-        "headerImage": "",
-        "collectionHeading": "",
-        "collectionDesc": "",
+        "headerImage": "header-image.jpg",
+        "collectionHeading": "The Stow Collection",
+        "collectionDesc": "The Stow Collection draws inspiration from the rich heritage of Japanese art, seamlessly blending traditional motifs with contemporary streetwear aesthetics. Each piece in the collection embodies a harmonious fusion of elegance and urban edge, paying homage to the intricate craftsmanship and timeless beauty of Japanese artistry.",
+        "availableBtn": "Not Available",
         "items": [
           {
             "itemImage": "item1.jpg",
-            "itemName": "",
-            "itemPrice": ""
+            "itemName": "Stow Haunted Shorts",
+            "itemPrice": "$1100 USD"
           },
           {
             "itemImage": "item2.jpg",
-            "itemName": "",
-            "itemPrice": ""
+            "itemName": "Stow White Base Shorts",
+            "itemPrice": "$1850 USD"
           },
           {
             "itemImage": "item3.jpg",
-            "itemName": "",
-            "itemPrice": ""
+            "itemName": "Stow Teddy Shirt",
+            "itemPrice": "$1950 USD"
           },
           {
             "itemImage": "item4.jpg",
-            "itemName": "",
-            "itemPrice": ""
+            "itemName": "Stow Gray Rayon Shirt",
+            "itemPrice": "$1900 USD"
           }
         ]
       }
     ],
     "von": [
       {
-        "headerImage": "",
+        "headerImage": "header-image.jpg",
         "collectionHeading": "",
         "collectionDesc": "",
+        "availableBtn": "Available",
         "items": [
           {
             "itemImage": "item1.jpg",
             "itemName": "",
-            "itemPrice": ""
+            "itemPrice": "$1200 USD"
           },
           {
             "itemImage": "item2.jpg",
             "itemName": "",
-            "itemPrice": ""
+            "itemPrice": "$1000 USD"
           },
           {
             "itemImage": "item3.jpg",
             "itemName": "",
-            "itemPrice": ""
+            "itemPrice": "$1000 USD"
           },
           {
             "itemImage": "item4.jpg",
             "itemName": "",
-            "itemPrice": ""
+            "itemPrice": "$1950 USD"
           }
         ]
       }
-    ]
+    ],
+    "kelly": [
+        {
+          "headerImage": "header-image.jpg",
+          "collectionHeading": "The Kelly Collection",
+          "collectionDesc": "The Kelly Collection exudes an air of relaxed sophistication and effortless allure, presenting a curated selection of leisurewear essentials and laid-back accessories. Designed for comfort and style, each piece evokes a serene ambiance, seamlessly blending tranquil whites with hints of golden warmth.",
+          "availableBtn": "Not Available",
+          "items": [
+            {
+              "itemImage": "item1.jpg",
+              "itemName": "Kelly Resort Shirt",
+              "itemPrice": "$1500 USD"
+            },
+            {
+              "itemImage": "item2.jpg",
+              "itemName": "Kelly Silk Blouse",
+              "itemPrice": "$1250 USD"
+            },
+            {
+              "itemImage": "item3.jpg",
+              "itemName": "Kelly Sling Bag",
+              "itemPrice": "$1100 USD"
+            },
+            {
+              "itemImage": "item4.jpg",
+              "itemName": "Kelly Mesh Baseball Jersey",
+              "itemPrice": "$1800 USD"
+            }
+          ]
+        }
+      ]
   }
   
