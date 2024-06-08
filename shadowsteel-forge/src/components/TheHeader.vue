@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <RouterLink to="/" class="navbar-brand" href="#">Aura</RouterLink>
+        <RouterLink to="/" class="navbar-brand mx-3" href="#">Aura</RouterLink>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -19,17 +19,18 @@
                         Releases
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <RouterLink to="/collection/adriane" class="dropdown-item">Adriane</RouterLink>
-                        <RouterLink to="/collection/mike" class="dropdown-item">Mike</RouterLink>
-                        <RouterLink to="/collection/stow" class="dropdown-item">Stow</RouterLink>
-                        <RouterLink to="/collection/von" class="dropdown-item">Von</RouterLink>
-                        <RouterLink to="/collection/kelly" class="dropdown-item">Kelly</RouterLink>
+                        <RouterLink to="/collection/von" class="dropdown-item">Von Collection</RouterLink>
+                        <div class="dropdown-divider"></div>
+                        <RouterLink to="/collection/adriane" class="dropdown-item">Adriane Collection</RouterLink>
+                        <RouterLink to="/collection/sora" class="dropdown-item">Sora Collection</RouterLink>
+                        <RouterLink to="/collection/stow" class="dropdown-item">Stow Collection</RouterLink>
+                        <RouterLink to="/collection/kelly" class="dropdown-item">Kell Collectiony</RouterLink>
                     </div>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item ms-auto">
-                    <RouterLink to="/login" class="nav-link">Staff Login</RouterLink>
+                    <RouterLink to="/login" class="nav-link mx-3">Staff Login</RouterLink>
                 </li>
             </ul>
         </div>

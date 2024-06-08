@@ -29,35 +29,35 @@
         ]
       }
     ],
-    "mike": [
-      {
-        "headerImage": "header-image.jpg",
-        "collectionHeading": "The Mike Collection",
-        "collectionDesc": "The Mike Collection celebrates individuality and rebellion with bold colors, eclectic patterns, and distressed textures. Each piece features oversized fits, rugged fabrics, and eye-catching graphics, perfect for those who dare to stand out. Embrace chaos and unrestrained expression with the Mike Collection.",
-        "availableBtn": "Not Available",
-        "items": [
-          {
-            "itemImage": "item1.jpg",
-            "itemName": "Mike Psycho Shirt",
-            "itemPrice": "$1550 USD"
-          },
-          {
-            "itemImage": "item2.jpg",
-            "itemName": "Mike My Muse Shirt",
-            "itemPrice": "$1050 USD"
-          },
-          {
-            "itemImage": "item3.jpg",
-            "itemName": "Mike Hello Pam Sweatshirt",
-            "itemPrice": "$1950 USD"
-          },
-          {
-            "itemImage": "item4.jpg",
-            "itemName": "Mike Caramel Chow Pants",
-            "itemPrice": "$2000 USD"
-          }
-        ]
-      }
+    "sora": [
+        {
+            "headerImage": "header-image.jpg",
+            "collectionHeading": "The Sora Collection",
+            "collectionDesc": "The Sora Collection celebrates individuality and rebellion with bold colors, eclectic patterns, and distressed textures. Each piece features oversized fits, rugged fabrics, and eye-catching graphics, perfect for those who dare to stand out. Embrace chaos and unrestrained expression with the Sora Collection.",
+            "availableBtn": "Not Available",
+            "items": [
+              {
+                "itemImage": "item1.jpg",
+                "itemName": "Sora Psycho Shirt",
+                "itemPrice": "$1550 USD"
+              },
+              {
+                "itemImage": "item2.jpg",
+                "itemName": "Sora My Muse Shirt",
+                "itemPrice": "$1050 USD"
+              },
+              {
+                "itemImage": "item3.jpg",
+                "itemName": "Sora Hello Pam Sweatshirt",
+                "itemPrice": "$1950 USD"
+              },
+              {
+                "itemImage": "item4.jpg",
+                "itemName": "Sora Caramel Chow Pants",
+                "itemPrice": "$2000 USD"
+              }
+            ]
+        }
     ],
     "stow": [
       {
