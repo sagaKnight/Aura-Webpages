@@ -25,25 +25,25 @@
                 <h1>Previous Releases</h1>
             </div>
         </div>
-        <div class="row text-white d-flex justify-content-center bg-danger">
-            <div class="col-5 col-xl-4 col-lg-4 col-md-5 col-sm-5text-black rounded mx-1">
+        <div class="row text-white p-2 d-flex justify-content-center mb-5">
+            <div class="col-5 col-xl-4 col-lg-4 col-md-5 col-sm-5 p-1 text-black rounded mx-1">
                 <RouterLink class="collection-header" to="/collection/mike">
                     <h3>The Mike Collection.</h3>
-                    <img src="../assets/images/collections/mike-collection.jpg" alt="michael image" class="rounded border border-black h-50 img-fluid" />
+                    <img src="../assets/images/collections/mike-collection.jpg" alt="michael image" class="rounded h-100" />
                 </RouterLink>
             </div>
         <div class="col-5 col-xl-4 col-lg-4 p-1 col-md-5 col-sm-5 text-black rounded mx-1">
                 <RouterLink class="collection-header" to="/collection/stow">
                     <h3>The Stow Collection.</h3>
-                    <img src="../assets/images/collections/stow-collection.jpg" alt="stow image" class="rounded border border-black h-50 img-fluid" />
+                    <img src="../assets/images/collections/stow-collection.jpg" alt="stow image" class="rounded h-100" />
                 </RouterLink>
             </div>
         </div>
-        <div class="row text-white d-flex justify-content-center bg-primary">
+        <div class="row text-white d-flex justify-content-center mb-3">
         <div class="col-5 col-xl-4 col-lg-4 p-1 col-md-5 col-sm-5 text-black rounded mx-1">
                 <RouterLink class="collection-header" to="/collection/adriane">
                     <h3>The Adriane Collection.</h3>
-                    <img src="../assets/images/collections/adriane-collection.jpg" alt="stow image" class="rounded border border-black h-50 img-fluid" />
+                    <img src="../assets/images/collections/adriane-collection.jpg" alt="stow image" class="rounded" />
                 </RouterLink>
             </div>
         </div>

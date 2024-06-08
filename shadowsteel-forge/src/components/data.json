@@ -92,28 +92,28 @@
     "von": [
       {
         "headerImage": "header-image.jpg",
-        "collectionHeading": "",
-        "collectionDesc": "",
+        "collectionHeading": "The Von Collection",
+        "collectionDesc": "The Von Collection infuses Japanese-inspired improvisation with tradition and innovation, marrying refined suiting with artful deconstruction to create a uniquely sophisticated style that blurs the lines between tradition and modernity.        ",
         "availableBtn": "Available",
         "items": [
           {
             "itemImage": "item1.jpg",
-            "itemName": "",
+            "itemName": "Von Zipup Jacket",
             "itemPrice": "$1200 USD"
           },
           {
             "itemImage": "item2.jpg",
-            "itemName": "",
+            "itemName": "Von Bondage Pants",
             "itemPrice": "$1000 USD"
           },
           {
             "itemImage": "item3.jpg",
-            "itemName": "",
-            "itemPrice": "$1000 USD"
+            "itemName": "Von Classic Overcoat",
+            "itemPrice": "$1700 USD"
           },
           {
             "itemImage": "item4.jpg",
-            "itemName": "",
+            "itemName": "Von Classic Short Jacket",
             "itemPrice": "$1950 USD"
           }
         ]
