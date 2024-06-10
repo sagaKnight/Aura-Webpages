@@ -4,9 +4,6 @@ import LoginView from '../views/LoginView.vue'
 import CollectionView from '../views/CollectionView.vue'
 import ShippingView from '../views/ShippingView.vue'
 import SizingView from '../views/SizingView.vue'
-import CartList from '../store/modules/cart/CartList.vue';
-import ProductList from '../store/modules/cart/ProductList.vue';
-
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -43,15 +40,7 @@ const router = createRouter({
       path: '/sizing',
       name: 'sizing',
       component: SizingView
-    },
-    {
-      path: '/inventory',
-      component: ProductList
-    },
-    {
-      path: '/cart',
-      component: CartList
-    },
+    }
   ],
 })
 
