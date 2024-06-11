@@ -9,18 +9,20 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="row border rounded d-flex align-items-center m-2">
+                    <div v-for="product in this.$store.state.cart" class="row border rounded d-flex align-items-center m-2 p-2">
                         <div class="col-6">
-                            <img class="cart-img" src="../assets/images/collections/adriane-collection.jpg">
+                            <img class="cart-img rounded p-1" src="../assets/images/collections/adriane-collection.jpg">
                         </div>
-                        <div class="col-6 p-3">
-                            <h3>Item Name</h3>
-                            <p>Item Price</p>
+                        <div class="col-6">
+                            <h3>{{ product }}</h3>
+                            <h3>{{ product.itemName }}</h3>
+                            <p>Size</p>
+                            <p>Sex</p>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer d-flex justify-content-between align-items-center">
-                    <h6 class="mr-auto">Total: $1000</h6>
+                    <h6 class="mr-auto">Total Price: {{ this.$store.state.totalPrice }}</h6>
                     <div>
                         <button type="button" class="btn btn-secondary mx-1" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Checkout</button>
@@ -34,9 +36,11 @@
 
 
 <style>
+
 .cart-img {
-    max-height: 100px;
+    max-height: 200px;
     width: 100%;
     object-fit: cover;
 }
+
 </style>

@@ -4,7 +4,7 @@
             <!-- Cart when small length -->
             <div class="d-md-none">
                 <button class="btn" data-toggle="modal" data-target="#cartModal">
-                    <span>Cart</span><i class="bi bi-bag"></i>
+                    <i class="bi bi-bag"></i>
                 </button>
             </div>
 
@@ -14,7 +14,7 @@
             </div>
 
             <!-- Logo medium length -->
-            <div class="d-sm-none d-md-block">
+            <div class="d-none d-sm-none d-md-block">
                 <RouterLink to="/" class="navbar-brand">Aura</RouterLink>
             </div>
 
@@ -55,22 +55,12 @@
             </div>
 
             <!-- Cart when medium -->
-            <div class="d-sm-none d-md-block">
+            <div class="d-none d-sm-none d-md-block">
                 <button class="btn" data-toggle="modal" data-target="#cartModal">
-                    <span>Cart</span><i class="bi bi-bag"></i>
+                    <i class="bi bi-bag"></i>
                 </button>
             </div>
         </div>
     </nav>
     <Cart></Cart>
 </template>
-
-<script>
-import Cart from './TheCart.vue'
-
-export default {
-    components: {
-        Cart
-    }
-}
-</script>

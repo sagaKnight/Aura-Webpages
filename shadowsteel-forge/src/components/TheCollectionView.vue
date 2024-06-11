@@ -34,7 +34,7 @@
                                     <img class="rounded" :src="getImageSrc(item, 'itemImage')" alt="Item Image">
                                 </button>
                                 <figcaption>{{ item.itemName }}</figcaption>
-                                <figcaption>{{ item.itemPrice }}</figcaption>
+                                <figcaption>${{ item.itemPrice }} USD</figcaption>
                                 <!-- Modal -->
                                 <div class="modal fade" id="clothesModal" tabindex="-1" role="dialog"
                                     aria-labelledby="formModal" aria-hidden="true">
@@ -53,6 +53,7 @@
                                                         <h5>Gouvea and Seetelo Design.</h5>
                                                         <hr>
                                                         <p>{{ modalItem.itemDescription }}</p>
+                                                        <h6>${{ modalItem.itemPrice }} USD</h6>
                                                     </div>
                                                 </div>
                                             </div>
@@ -80,7 +81,7 @@
                                                         <div class="col-6">
                                                             <button type="button" class="btn btn-secondary mx-2"
                                                                 data-dismiss="modal">Close</button>
-                                                            <button type="button" class="btn btn-primary">Add to
+                                                            <button type="button" class="btn btn-primary" @click="addToCart">Add to
                                                                 Cart</button>
                                                         </div>
                                                     </div>
@@ -145,15 +146,21 @@ export default {
         },
         itemModal(item) {
             this.modalItem = item;
+        },
+        addToCart() {
+            this.$store.dispatch('addItemToCart', this.modalItem);
+            console.log(this.modalItem);
         }
     },
 }
 </script>
 
 <style>
+
 .product-collection-img {
     max-height: 400px;
     object-fit: cover;
     width: 100%;
 }
+
 </style>
