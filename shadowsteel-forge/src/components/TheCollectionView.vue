@@ -41,7 +41,7 @@
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="formModal">{{ modalItem.itemName }}</h5>
-                                            <button type="button" class="btn-close" data-dismiss="modal"
+                                            <button type="button" class="btn-close" data-dismiss="modal" 
                                                 aria-label="Close">
                                             </button>
                                         </div>
@@ -57,8 +57,8 @@
                                             </div>
                                         </div>
                                         <div class="modal-footer justify-content-center">
-                                            <div class="row" v-if="content.availableBtn == `Available`">
-                                                    <div class="col-5">
+                                            <div class="row justify-content-center" v-if="content.availableBtn == `Available`">
+                                                    <div class="col-8 mb-3">
                                                         <select class="form-select" aria-label="Size Select"
                                                             v-model="selectedSize">
                                                             <option disabled value="">Select Size</option>
@@ -68,13 +68,13 @@
                                                             <option value="L">Large</option>
                                                             <option value="XL">Extra Large</option>
                                                         </select>
+                                                        <div class="mt-2">{{ errorMsg }}</div>
                                                     </div>
-                                                    <div class="col-7">
+                                                    <div class="col-12">
                                                         <button type="button" class="btn btn-secondary mx-2"
                                                             data-dismiss="modal">Close</button>
                                                         <button type="button" class="btn btn-primary"
-                                                            @click="addToCart" :disabled="!selectedSize">Add to
-                                                            Cart</button>
+                                                            @click="addToCart" :disabled="addedButtonDisabled">{{ buttonText }}</button>
                                                     </div>
                                                 </div>
                                             <div class="row" v-else>
@@ -110,7 +110,10 @@ export default {
                 itemPrice: '',
                 itemDescription: '',
                 selectedSize: '',
-            }
+            },
+            errorMsg: '',
+            buttonText: "Add to Cart",
+            addedButtonDisabled: false
         }
     },
     computed: {
@@ -139,14 +142,26 @@ export default {
             this.modalItem = item;
         },
         addToCart() {
+            if (!this.selectedSize) {
+                    this.errorMsg = "Please select a size."
+                    return;
+                }
             const cartItem = {
                 item: this.modalItem,
                 itemImage: this.getImageSrc(this.modalItem, 'itemImage'),
                 selectedSize: this.selectedSize,
             };
             this.$store.dispatch('addItemToCart', cartItem);
+            this.buttonText = "Added!";
+            this.addedButtonDisabled = true;
             console.log(cartItem);
-            this.selectedSize = ''
+            this.selectedSize = '',
+            this.errorMsg = ''
+
+            setTimeout(() => {
+                this.buttonText = "Add to Cart";
+                this.addedButtonDisabled = false;
+            }, 2000);
         }
     },
 }
