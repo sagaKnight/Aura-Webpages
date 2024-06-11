@@ -9,20 +9,24 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div v-for="product in this.$store.state.cart" class="row border rounded d-flex align-items-center m-2 p-2">
-                        <div class="col-6">
-                            <img class="cart-img rounded p-1" src="../assets/images/collections/adriane-collection.jpg">
+                    <div v-for="productObject in this.$store.state.cart" class="row rounded d-flex align-items-center">
+                        <div class="col-2">
+                            <h6>${{ productObject.item.itemPrice }} USD</h6>
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <h3>{{ productObject.item.itemName }}.</h3>
+                                <h5>{{ productObject.item.collectionName }} collection.</h5>
+                                <h6>Selected Size: {{ productObject.selectedSize }}</h6>
+                            </div>
                         </div>
                         <div class="col-6">
-                            <h3>{{ product }}</h3>
-                            <h3>{{ product.itemName }}</h3>
-                            <p>Size</p>
-                            <p>Sex</p>
+                            <img class="cart-img rounded p-1" :src="productObject.itemImage" alt="Product Image">
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer d-flex justify-content-between align-items-center">
-                    <h6 class="mr-auto">Total Price: {{ this.$store.state.totalPrice }}</h6>
+                    <h6 class="mr-auto">Total Price: {{ cartTotalPrice }}</h6>
                     <div>
                         <button type="button" class="btn btn-secondary mx-1" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Checkout</button>
@@ -33,14 +37,20 @@
     </div>
 </template>
 
-
+<script>
+export default {
+    computed: {
+        cartTotalPrice() {
+            return this.$store.getters.cartTotalPrice;
+        }
+    }
+}
+</script>
 
 <style>
-
 .cart-img {
     max-height: 200px;
     width: 100%;
     object-fit: cover;
 }
-
 </style>

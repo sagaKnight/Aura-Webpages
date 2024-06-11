@@ -4,6 +4,7 @@ const store = createStore({
   state () {
     return {
       cart: [],
+      totalPrice: 0
     }
   },
   mutations: {
@@ -35,7 +36,7 @@ const store = createStore({
         return state.cart.length;
     },
     cartTotalPrice(state) {
-        return $state.cart.reduce((totalPrice, item) => totalPrice + item.price, 0);
+        return state.cart.reduce((totalPrice, item) => totalPrice + item.price, 0);
     }
   }
 })
