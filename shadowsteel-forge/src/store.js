@@ -3,8 +3,7 @@ import { createStore } from 'vuex'
 const store = createStore({
   state () {
     return {
-      cart: [],
-      totalPrice: 0
+      cart: []
     }
   },
   mutations: {
@@ -36,9 +35,9 @@ const store = createStore({
         return state.cart.length;
     },
     cartTotalPrice(state) {
-        return state.cart.reduce((totalPrice, item) => totalPrice + item.price, 0);
+      return state.cart.reduce((totalPrice, productObject) => totalPrice + productObject.item.itemPrice, 0);
     }
-  }
+  }  
 })
 
 export default store

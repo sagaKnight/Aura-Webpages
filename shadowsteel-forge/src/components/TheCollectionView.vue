@@ -73,7 +73,7 @@
                                                         <button type="button" class="btn btn-secondary mx-2"
                                                             data-dismiss="modal">Close</button>
                                                         <button type="button" class="btn btn-primary"
-                                                            @click="addToCart">Add to
+                                                            @click="addToCart" :disabled="!selectedSize">Add to
                                                             Cart</button>
                                                     </div>
                                                 </div>
@@ -122,7 +122,7 @@ export default {
         //Necessary to watch the route object change when user changes pages.
         '$route'(to) {
             this.collectionName = to.params.collection;
-        }
+        },
     },
     mounted() {
         this.selectedSize = ''
