@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import VuexPersistence from 'vuex-persist'
 
 const store = createStore({
   state () {
@@ -37,7 +38,9 @@ const store = createStore({
     cartTotalPrice(state) {
       return state.cart.reduce((totalPrice, productObject) => totalPrice + productObject.item.itemPrice, 0);
     }
-  }  
+  },
+  //Using Vuex Persistence Plugin. 
+  plugins: [new VuexPersistence().plugin]
 })
 
 export default store

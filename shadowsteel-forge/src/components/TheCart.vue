@@ -5,7 +5,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Your Cart</h5>
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="btn-close shadow-none" data-dismiss="modal" aria-label="Close">
                     </button>
                 </div>
                 <div class="modal-body">
@@ -26,7 +26,7 @@
                         </div>
                         <div class="col-7 d-flex p-2">
                             <img class="cart-img rounded" :src="productObject.itemImage" alt="Product Image">
-                            <button type="button" class="btn-close"
+                            <button type="button" class="btn-close shadow-none"
                                 @click="removeItemFromCart(index)"></button>
                         </div>
                     </div>
