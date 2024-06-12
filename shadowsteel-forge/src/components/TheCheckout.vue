@@ -21,17 +21,19 @@
                 </div>
             </div>
             <div class="col-4">
-            <h3>Checkout</h3>
-                <form name="checkoutInformation" action="">
-                    <div>
-                        <label for="fName">First Name</label>
-                        <input v-model="fName" id="fName">
-                    </div>
-                    <div>
-                        <label for="lName">Last Name</label>
-                        <input v-model="lName" id="lName">
-                    </div>
-                </form>
+                <h3>Checkout</h3>
+                <div>
+                    <form name="checkoutInformation" class="d-flex flex-direction-column">
+                        <div>
+                            <label for="fName">First Name</label>
+                            <input v-model="fName" id="fName">
+                        </div>
+                        <div>
+                            <label for="lName">Last Name</label>
+                            <input v-model="lName" id="lName">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="text-center" v-else>

@@ -66,7 +66,7 @@ export default {
             this.$store.dispatch('removeItemFromCart', index);
         }
 
-    }
+    },
 }
 </script>
 
