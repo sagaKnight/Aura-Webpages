@@ -3,15 +3,18 @@
         <div class="row">
             <div v-if="order" class="receipt">
                 <h1>Receipt</h1>
+                <h3>Thanks {{ order.fName }}!</h3>
                 <p>Order ID: {{ order.id }}</p>
-                <p>Product Names: {{ order.productNames }}</p>
-
-                <!-- Use RouterLink component to navigate -->
-                <router-link to="/">
+                <ul class="list-group m-3">
+                    <div v-for="item in order.productNames" class="">
+                        <li class="list-group-item">{{ item.itemName }} {{ item.selectedSize }}</li>
+                    </div>
+                </ul>
+                <RouterLink to="/">
                     <button class="btn btn-primary">
                         Back to Home
                     </button>
-                </router-link>
+                </RouterLink>
             </div>
             <div v-else>
                 <p>Loading...</p>
@@ -31,16 +34,14 @@ export default {
         };
     },
     mounted() {
-        console.log('Component mounted');
         axios.get('http://localhost:3000/receipt')
             .then(response => {
-                console.log('Response Data:', response.data);
                 this.order = response.data;
+                console.log(this.order);
             })
             .catch(error => {
                 console.error("Error", error);
             });
     }
-
 }
 </script>

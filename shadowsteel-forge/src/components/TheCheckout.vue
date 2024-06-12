@@ -246,7 +246,10 @@ export default {
             */
             if (Object.keys(this.errors).length === 0) {
                 try {
-                    const productNames = this.$store.state.cart.map(productObject => productObject.item.itemName);
+                    const productNames = this.$store.state.cart.map(productObject => ({
+                        itemName: productObject.item.itemName,
+                        selectedSize: productObject.selectedSize
+                    }));
 
                     const response = await axios.post('http://localhost:3000/submit-form', {
                         productNames: JSON.stringify(productNames),
@@ -262,8 +265,8 @@ export default {
                         zip: this.zip,
                         gift: this.gift
                     });
-                        //this.clearCart();
-                        this.$router.push('/receipt');
+                    //this.clearCart();
+                    this.$router.push('/receipt');
 
                 } catch (error) {
                     console.log(error);
