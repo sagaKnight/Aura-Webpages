@@ -5,6 +5,7 @@ import CollectionView from '../views/CollectionView.vue'
 import ShippingView from '../views/ShippingView.vue'
 import SizingView from '../views/SizingView.vue'
 import CheckoutView from '../views/CheckoutView.vue'
+import ReceiptView from '../views/ReceiptView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -46,6 +47,11 @@ const router = createRouter({
       path: '/checkout',
       name: 'checkout',
       component: CheckoutView
+    },
+    {
+      path: '/receipt',
+      name: 'receipt',
+      component: ReceiptView
     }
   ],
 })

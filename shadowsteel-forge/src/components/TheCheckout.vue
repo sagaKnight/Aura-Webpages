@@ -93,8 +93,7 @@
                             </div>
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="mb-3 form-floating">
-                                    <input type="text" class="form-control" v-model="zip" id="zip"
-                                        placeholder="1222">
+                                    <input type="text" class="form-control" v-model="zip" id="zip" placeholder="1222">
                                     <label for="zip">ZIP</label>
                                     <div v-if="errors.zip" class="text-danger text-center">{{ errors.zip }}
                                     </div>
@@ -118,17 +117,22 @@
                         <div class="row">
                             <h4>Payment Method</h4>
                             <div class="">
-                                <button class="p-3 mb-2 border rounded d-flex btn col-12">
+                                <button :disabled="paymentConfirmed" @click="confirm"
+                                    class="p-3 mb-2 border rounded d-flex btn col-12">
                                     <h6 class="m-1">Credit Card</h6><i class="bi bi-credit-card-fill"></i>
                                 </button>
-                                <button class="p-3 mb-2 border rounded d-flex btn col-12">
+                                <button :disabled="paymentConfirmed" @click="confirm"
+                                    class="p-3 mb-2 border rounded d-flex btn col-12">
                                     <h6 class="m-1">Paypal</h6><i class="bi bi-paypal"></i>
                                 </button>
-                                <button class="p-3 mb-2 border rounded d-flex btn col-12">
+                                <button :disabled="paymentConfirmed" @click="confirm"
+                                    class="p-3 mb-2 border rounded d-flex btn col-12">
                                     <h6 class="m-1">Pay Over Time</h6><i class="bi bi-stripe"></i>
                                 </button>
                             </div>
                         </div>
+                        <hr>
+                        <button :disabled="!paymentConfirmed" class="btn btn-primary">Pay Now</button>
                     </form>
                 </div>
             </div>
@@ -156,7 +160,8 @@ export default {
             state: '',
             country: '',
             gift: false,
-            errors: {}
+            errors: {},
+            paymentConfirmed: false,
         };
     },
     computed: {
@@ -171,70 +176,80 @@ export default {
         removeItemFromCart(index) {
             this.$store.dispatch('removeItemFromCart', index);
         },
+        confirm() {
+            this.paymentConfirmed = true;
+            this.button
+        },
+        clearCart() {
+            this.$store.dispatch('clearCart');
+        },
         async validateForm() {
             this.errors = {};
-
-            if (!this.email) {
-                this.errors.email = 'Email is required';
-            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email)) {
-                this.errors.email = 'Invalid email';
-            }
-
-            if (!this.fName) {
-                this.errors.fName = 'First name is required';
-            } else if (/\d/.test(this.fName)) {
-                this.errors.fName = 'First name cannot contain numbers';
-            }
-
-            if (!this.lName) {
-                this.errors.lName = 'Last name is required';
-            } else if (/\d/.test(this.lName)) {
-                this.errors.lName = 'Last name cannot contain numbers';
-            }
-
-            if (!this.pNumber) {
-                this.errors.pNumber = 'Phone number is required';
-            } else if (!/^\d{10,15}$/.test(this.pNumber)) {
-                this.errors.pNumber = 'Phone number must be between 10 and 15 digits';
-            }
-
-            if (!this.address) {
-                this.errors.address = 'Address is required';
-            }
-
-            if (/[a-zA-Z]/.test(this.aptNumber)) {
-                this.errors.aptNumber = 'Apartment Number cannot have letters';
-            } else if (!this.aptNumber.trim()) {
-                this.aptNumber = null;
-            }
-
-            if (!this.city) {
-                this.errors.city = 'City is required';
-            } else if (/\d/.test(this.city)) {
-                this.errors.city = 'City cannot contain numbers';
-            }
-
-            if (!this.state) {
-                this.errors.state = 'State is required';
-            } else if (/\d/.test(this.state)) {
-                this.errors.state = 'State cannot contain numbers';
-            }
-
-            if (!this.zip) {
-                this.errors.zip = 'ZIP code is required';
-            } else if (!/^\d{4,5}$/.test(this.zip)) {
-                this.errors.zip = 'ZIP code must be 4 or 5 digits';
-            }
-
-            if (!this.country) {
-                this.errors.country = 'Country is required';
-            } else if (/\d/.test(this.country)) {
-                this.errors.country = 'Country cannot contain numbers';
-            }
-
+            /*
+                        if (!this.email) {
+                            this.errors.email = 'Email is required';
+                        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email)) {
+                            this.errors.email = 'Invalid email';
+                        }
+            
+                        if (!this.fName) {
+                            this.errors.fName = 'First name is required';
+                        } else if (/\d/.test(this.fName)) {
+                            this.errors.fName = 'First name cannot contain numbers';
+                        }
+            
+                        if (!this.lName) {
+                            this.errors.lName = 'Last name is required';
+                        } else if (/\d/.test(this.lName)) {
+                            this.errors.lName = 'Last name cannot contain numbers';
+                        }
+            
+                        if (!this.pNumber) {
+                            this.errors.pNumber = 'Phone number is required';
+                        } else if (!/^\d{10,15}$/.test(this.pNumber)) {
+                            this.errors.pNumber = 'Phone number must be between 10 and 15 digits';
+                        }
+            
+                        if (!this.address) {
+                            this.errors.address = 'Address is required';
+                        }
+            
+                        if (/[a-zA-Z]/.test(this.aptNumber)) {
+                            this.errors.aptNumber = 'Apartment Number cannot have letters';
+                        } else if (!this.aptNumber.trim()) {
+                            this.aptNumber = null;
+                        }
+            
+                        if (!this.city) {
+                            this.errors.city = 'City is required';
+                        } else if (/\d/.test(this.city)) {
+                            this.errors.city = 'City cannot contain numbers';
+                        }
+            
+                        if (!this.state) {
+                            this.errors.state = 'State is required';
+                        } else if (/\d/.test(this.state)) {
+                            this.errors.state = 'State cannot contain numbers';
+                        }
+            
+                        if (!this.zip) {
+                            this.errors.zip = 'ZIP code is required';
+                        } else if (!/^\d{4,5}$/.test(this.zip)) {
+                            this.errors.zip = 'ZIP code must be 4 or 5 digits';
+                        }
+            
+                        if (!this.country) {
+                            this.errors.country = 'Country is required';
+                        } else if (/\d/.test(this.country)) {
+                            this.errors.country = 'Country cannot contain numbers';
+                        }
+            */
             if (Object.keys(this.errors).length === 0) {
                 try {
+                    const productNames = this.$store.state.cart.map(productObject => productObject.item.itemName);
+
                     const response = await axios.post('http://localhost:3000/submit-form', {
+                        productNames: JSON.stringify(productNames),
                         email: this.email,
                         fName: this.fName,
                         lName: this.lName,
@@ -247,9 +262,11 @@ export default {
                         zip: this.zip,
                         gift: this.gift
                     });
-                    console.log(response.data);
+                        //this.clearCart();
+                        this.$router.push('/receipt');
+
                 } catch (error) {
-                    console.log(error.response.data);
+                    console.log(error);
                 }
             }
         },
