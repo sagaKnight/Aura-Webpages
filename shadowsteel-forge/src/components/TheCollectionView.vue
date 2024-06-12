@@ -62,8 +62,8 @@
                                                         <select class="form-select" aria-label="Size Select"
                                                             v-model="selectedSize">
                                                             <option disabled value="">Select Size</option>
-                                                            <option value="S">Small</option>
                                                             <option value="XS">Extra Small</option>
+                                                            <option value="S">Small</option>
                                                             <option value="M">Medium</option>
                                                             <option value="L">Large</option>
                                                             <option value="XL">Extra Large</option>

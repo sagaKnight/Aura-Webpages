@@ -185,7 +185,7 @@ export default {
         },
         async validateForm() {
             this.errors = {};
-            /*
+            
                         if (!this.email) {
                             this.errors.email = 'Email is required';
                         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email)) {
@@ -243,7 +243,7 @@ export default {
                         } else if (/\d/.test(this.country)) {
                             this.errors.country = 'Country cannot contain numbers';
                         }
-            */
+
             if (Object.keys(this.errors).length === 0) {
                 try {
                     const productNames = this.$store.state.cart.map(productObject => ({
@@ -265,7 +265,7 @@ export default {
                         zip: this.zip,
                         gift: this.gift
                     });
-                    //this.clearCart();
+                    this.clearCart();
                     this.$store.commit('orderInformation', response.data)
                     this.$router.push('/receipt');
 

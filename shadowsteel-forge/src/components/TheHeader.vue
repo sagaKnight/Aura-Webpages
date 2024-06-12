@@ -33,9 +33,9 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
                             <RouterLink to="/collection/von" class="dropdown-item">Von Collection</RouterLink>
                             <RouterLink to="/collection/kelly" class="dropdown-item">Kelly Collection</RouterLink>
+                            <RouterLink to="/collection/sora" class="dropdown-item">Sora Collection</RouterLink>
                             <div class="dropdown-divider"></div>
                             <RouterLink to="/collection/adriane" class="dropdown-item">Adriane Collection</RouterLink>
-                            <RouterLink to="/collection/sora" class="dropdown-item">Sora Collection</RouterLink>
                             <RouterLink to="/collection/stow" class="dropdown-item">Stow Collection</RouterLink>
                         </div>
                     </li>
