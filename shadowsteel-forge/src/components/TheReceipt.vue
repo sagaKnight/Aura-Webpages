@@ -27,7 +27,6 @@
 import axios from 'axios';
 
 export default {
-    name: 'ReceiptPage',
     data() {
         return {
             order: {},
@@ -37,11 +36,15 @@ export default {
         axios.get('http://localhost:3000/receipt')
             .then(response => {
                 this.order = response.data;
-                console.log(this.order);
             })
             .catch(error => {
                 console.error("Error", error);
             });
+    },
+    beforeRouteLeave(to, from, next) {
+        this.$store.commit('clearOrderInformation');
+        next();
     }
+
 }
 </script>

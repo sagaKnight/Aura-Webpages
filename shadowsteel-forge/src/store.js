@@ -4,7 +4,8 @@ import VuexPersistence from 'vuex-persist'
 const store = createStore({
   state () {
     return {
-      cart: []
+      cart: [],
+      order: null,
     }
   },
   mutations: {
@@ -17,6 +18,12 @@ const store = createStore({
     clearCart(state) {
         state.cart = [];
     },
+    orderInformation(state, order) {
+      state.order = order;
+    },
+    clearOrderInformation(state) {
+      state.order = null;
+    }
   },
   actions: {
     addItemToCart({ commit }, item) {

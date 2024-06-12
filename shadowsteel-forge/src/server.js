@@ -40,7 +40,7 @@ app.post('/submit-form', (req, res) => {
     });
 });
 
-//Get Function. Which puts table into descending order and picks index 0.
+//Get Receipt Function. Which puts table into descending order and picks index 0.
 app.get('/receipt', (req, res) => {
     const sql = `SELECT * FROM AuraOrders ORDER BY id DESC LIMIT 1`;
     db.query(sql, (err, result) => {
@@ -60,6 +60,29 @@ app.get('/receipt', (req, res) => {
         res.json(order);
     });
 });
+
+// Get all orders function.
+app.get('/orders', (req, res) => {
+    const sql = `SELECT * FROM AuraOrders ORDER BY id ASC`;
+    db.query(sql, (err, results) => {
+        if (err) {
+            console.error('Error retrieving data:', err);
+            res.status(500).json({ error: 'Error retrieving data' });
+            return;
+        }
+        console.log(results);
+        if (results.length === 0) {
+            console.log('No data found');
+            res.status(404).json({ error: 'No data found' });
+            return;
+        }
+        results.forEach(order => {
+            order.productNames = JSON.parse(order.productNames);
+        });
+        res.json(results);
+    });
+});
+
 
 app.listen(port);
 

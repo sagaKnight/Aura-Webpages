@@ -6,6 +6,8 @@ import ShippingView from '../views/ShippingView.vue'
 import SizingView from '../views/SizingView.vue'
 import CheckoutView from '../views/CheckoutView.vue'
 import ReceiptView from '../views/ReceiptView.vue'
+import store from '../store.js'
+import ManagerView from '../views/ManagerView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -51,7 +53,19 @@ const router = createRouter({
     {
       path: '/receipt',
       name: 'receipt',
-      component: ReceiptView
+      component: ReceiptView,
+      beforeEnter: (to, from, next) => {
+        if (store.state.order != null) {
+          next();
+        } else {
+          next({ name: 'home' });
+        }
+      }
+    },
+    {
+      path: '/manager',
+      name: 'manager',
+      component: ManagerView
     }
   ],
 })

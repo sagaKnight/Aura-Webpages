@@ -17,10 +17,7 @@
         class="col-8 col-xl-2 col-sm-5 align-self-center bg-white text-black p-4 rounded position-absolute top-20 start-20">
         <h1>Aura</h1>
         <h2>Relaxed. Effortless. Prepared.</h2>
-        <h6>Limited. Raffle Entry.</h6>
-        <RouterLink to="/waitlist-form">
-          <button class="btn btn-dark mt-2">Join the Waitlist</button>
-        </RouterLink>
+        <button class="btn btn-dark mt-2">Kelly Collection</button>
       </div>
     </div>
   </div>

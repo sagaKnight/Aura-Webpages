@@ -266,6 +266,7 @@ export default {
                         gift: this.gift
                     });
                     //this.clearCart();
+                    this.$store.commit('orderInformation', response.data)
                     this.$router.push('/receipt');
 
                 } catch (error) {
