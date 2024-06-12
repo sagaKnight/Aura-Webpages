@@ -93,10 +93,10 @@
                             </div>
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="mb-3 form-floating">
-                                    <input type="text" class="form-control" v-model="zipCode" id="zipCode"
+                                    <input type="text" class="form-control" v-model="zip" id="zip"
                                         placeholder="1222">
-                                    <label for="zipCode">ZIP</label>
-                                    <div v-if="errors.zipCode" class="text-danger text-center">{{ errors.zipCode }}
+                                    <label for="zip">ZIP</label>
+                                    <div v-if="errors.zip" class="text-danger text-center">{{ errors.zip }}
                                     </div>
                                 </div>
                             </div>
@@ -140,6 +140,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
     data() {
         return {
@@ -150,6 +152,7 @@ export default {
             address: '',
             aptNumber: '',
             city: '',
+            zip: '',
             state: '',
             country: '',
             gift: false,
@@ -168,7 +171,7 @@ export default {
         removeItemFromCart(index) {
             this.$store.dispatch('removeItemFromCart', index);
         },
-        validateForm() {
+        async validateForm() {
             this.errors = {};
 
             if (!this.email) {
@@ -199,8 +202,10 @@ export default {
                 this.errors.address = 'Address is required';
             }
 
-            if (/\d/.test(this.aptNumber)) {
-                this.errors.aptNumber = "Apt Number cannot container numbers";
+            if (/[a-zA-Z]/.test(this.aptNumber)) {
+                this.errors.aptNumber = 'Apartment Number cannot have letters';
+            } else if (!this.aptNumber.trim()) {
+                this.aptNumber = null;
             }
 
             if (!this.city) {
@@ -215,10 +220,10 @@ export default {
                 this.errors.state = 'State cannot contain numbers';
             }
 
-            if (!this.zipCode) {
-                this.errors.zipCode = 'ZIP code is required';
-            } else if (!/^\d{4,5}$/.test(this.zipCode)) {
-                this.errors.zipCode = 'ZIP code must be 4 or 5 digits';
+            if (!this.zip) {
+                this.errors.zip = 'ZIP code is required';
+            } else if (!/^\d{4,5}$/.test(this.zip)) {
+                this.errors.zip = 'ZIP code must be 4 or 5 digits';
             }
 
             if (!this.country) {
@@ -227,27 +232,27 @@ export default {
                 this.errors.country = 'Country cannot contain numbers';
             }
 
-            //Create a method to then push a button 
-            // To Remove Testing button.
             if (Object.keys(this.errors).length === 0) {
-                console.log({
-                    email: this.email,
-                    fName: this.fName,
-                    lName: this.lName,
-                    pNumber: this.pNumber,
-                    address: this.address,
-                    aptNumber: this.aptNumber,
-                    city: this.city,
-                    state: this.state,
-                    country: this.country,
-                    gift: this.gift
-                });
-                alert('Form submitted successfully!');
+                try {
+                    const response = await axios.post('http://localhost:3000/submit-form', {
+                        email: this.email,
+                        fName: this.fName,
+                        lName: this.lName,
+                        pNumber: this.pNumber,
+                        address: this.address,
+                        aptNumber: this.aptNumber,
+                        city: this.city,
+                        state: this.state,
+                        country: this.country,
+                        zip: this.zip,
+                        gift: this.gift
+                    });
+                    console.log(response.data);
+                } catch (error) {
+                    console.log(error.response.data);
+                }
             }
         },
-        removeItemFromCart(index) {
-            this.$store.dispatch('removeItemFromCart', index);
-        }
     }
 }
 </script>
