@@ -172,7 +172,7 @@
       "headerImage": "header-image.jpg",
       "collectionHeading": "The Kelly Collection",
       "collectionDesc": "The Kelly Collection exudes an air of relaxed sophistication and effortless allure, presenting a curated selection of leisurewear essentials and laid-back accessories. Designed for comfort and style, each piece evokes a serene ambiance, seamlessly blending tranquil whites with hints of golden warmth.",
-      "availableBtn": "Not Available",
+      "availableBtn": "Available",
       "items": [
         {
           "itemId": 1502,
@@ -193,9 +193,9 @@
         {
           "itemId": 1128,
           "itemImage": "item3.jpg",
-          "itemName": "Kelly Sling Bag",
-          "itemPrice": 1100,
-          "itemDescription": "The Kelly Sling Bag combines practicality with style, featuring a serene ambiance that complements any leisurewear ensemble.",
+          "itemName": "Kelly Cream Jacket",
+          "itemPrice": 2000,
+          "itemDescription": "The Kelly Cream Jacket combines practicality with style, featuring a strong ambiance that complements any ensemble.",
           "collectionName": "kelly"
         },
         {

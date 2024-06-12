@@ -4,7 +4,7 @@
             <!-- Cart when small length -->
             <div class="d-md-none">
                 <button class="btn" data-toggle="modal" data-target="#cartModal">
-                    <i class="bi bi-bag"></i>
+                    <i class="bi bi-bag"></i><span v-if="cartTotalItems > 0">{{ cartTotalItems }}</span>
                 </button>
             </div>
 
@@ -32,11 +32,11 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
                             <RouterLink to="/collection/von" class="dropdown-item">Von Collection</RouterLink>
+                            <RouterLink to="/collection/kelly" class="dropdown-item">Kelly Collection</RouterLink>
                             <div class="dropdown-divider"></div>
                             <RouterLink to="/collection/adriane" class="dropdown-item">Adriane Collection</RouterLink>
                             <RouterLink to="/collection/sora" class="dropdown-item">Sora Collection</RouterLink>
                             <RouterLink to="/collection/stow" class="dropdown-item">Stow Collection</RouterLink>
-                            <RouterLink to="/collection/kelly" class="dropdown-item">Kelly Collection</RouterLink>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -57,10 +57,19 @@
             <!-- Cart when medium -->
             <div class="d-none d-sm-none d-md-block">
                 <button class="btn" data-toggle="modal" data-target="#cartModal">
-                    <i class="bi bi-bag"></i>
+                    <i class="bi bi-bag"></i><span v-if="cartTotalItems > 0">{{ cartTotalItems }}</span>
                 </button>
             </div>
         </div>
     </nav>
-    <Cart></Cart>
 </template>
+
+<script>
+export default {
+    computed: {
+        cartTotalItems() {
+            return this.$store.getters.cartTotalItems;
+        }
+    }
+}
+</script>`

@@ -49,7 +49,7 @@
                                             <div class="row justify-content-center">
                                                 <img class="col-9 mb-2" :src="getImageSrc(modalItem, 'itemImage')">
                                                 <div class="col-12">
-                                                    <h5>Gouvea and Seetelo Design.</h5>
+                                                    <p>Gouvea and Seetelo Design.</p>
                                                     <hr>
                                                     <p>{{ modalItem.itemDescription }}</p>
                                                     <h6>${{ modalItem.itemPrice }} USD</h6>
@@ -154,14 +154,13 @@ export default {
             this.$store.dispatch('addItemToCart', cartItem);
             this.buttonText = "Added!";
             this.addedButtonDisabled = true;
-            console.log(cartItem);
             this.selectedSize = '',
             this.errorMsg = ''
 
             setTimeout(() => {
                 this.buttonText = "Add to Cart";
                 this.addedButtonDisabled = false;
-            }, 2000);
+            }, 1000);
         }
     },
 }
