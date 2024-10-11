@@ -184,7 +184,7 @@ export default {
             this.$store.dispatch('clearCart');
         },
         async validateForm() {
-            this.errors = {};
+            /*this.errors = {};
             
                         if (!this.email) {
                             this.errors.email = 'Email is required';
@@ -243,14 +243,14 @@ export default {
                         } else if (/\d/.test(this.country)) {
                             this.errors.country = 'Country cannot contain numbers';
                         }
-
+            */
             if (Object.keys(this.errors).length === 0) {
                 try {
                     const productNames = this.$store.state.cart.map(productObject => ({
                         itemName: productObject.item.itemName,
                         selectedSize: productObject.selectedSize
                     }));
-
+                    
                     const response = await axios.post('http://localhost:3000/submit-form', {
                         productNames: JSON.stringify(productNames),
                         email: this.email,

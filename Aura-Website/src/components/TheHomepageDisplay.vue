@@ -37,8 +37,6 @@
             </div>
         </div>
 
-
-
         <div class="row d-flex justify-content-center m-1">
             <div class="col-8 col-xl-6 col-lg-6 col-md-6 col-sm-8 text-black rounded">
                 <h3>The Sora Collection.</h3>

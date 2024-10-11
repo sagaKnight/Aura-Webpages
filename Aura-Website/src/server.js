@@ -14,7 +14,9 @@ app.use(cors());
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    database: 'AuraProject'
+    password: '',
+    database: 'AuraProject',
+    port: 3306
 });
 
 db.connect((err) => {
