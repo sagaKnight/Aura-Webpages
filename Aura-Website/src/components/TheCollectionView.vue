@@ -105,6 +105,7 @@ export default {
     data() {
         return {
             collectionName: this.$route.params.collection,
+            collectionData: null,
             modalItem: {
                 itemName: '',
                 itemPrice: '',
@@ -130,6 +131,9 @@ export default {
     mounted() {
         this.selectedSize = ''
     },
+    created() {
+        this.fetchCollectionData();
+    },
     methods: {
         /*Convulted way to get local images. 
         Constructs a URL based on the this.collectionName route param and 
@@ -137,6 +141,16 @@ export default {
         */
         getImageSrc(array, imageName) {
             return new URL(`../assets/images/collections/${this.collectionName}page/${array[imageName]}`, import.meta.url).href;
+        },
+        async fetchCollectionData() {
+            const collectionName = this.$route.params.collection;
+            const response = await fetch(`http://localhost:3000/specific-collection/${collectionName}`);
+            if (response.ok) {
+                this.collectionData = await response.json();
+                console.log('Fetched data:', this.collectionData); 
+            } else {
+                console.error('Error fetching data:', response.status);
+            }
         },
         itemModal(item) {
             this.modalItem = item;
