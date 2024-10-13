@@ -53,6 +53,14 @@
               >
                 {{ collection.title[0].toUpperCase() + collection.title.slice(1) }}
               </RouterLink>
+              <div class="dropdown-divider"></div>
+              <RouterLink
+                v-for="collection in notAvailableCollection"
+                class="dropdown-item"
+                :to="`/collection/${collection.title}`"
+              >
+                {{ collection.title[0].toUpperCase() + collection.title.slice(1) }}
+              </RouterLink>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -108,6 +116,9 @@ export default {
     },
     availableCollection() {
         return this.collections.filter(collection => collection.available === 1);
+    },
+    notAvailableCollection() {
+        return this.collections.filter(collection => collection.available === 0);
     }
   },
   methods: {

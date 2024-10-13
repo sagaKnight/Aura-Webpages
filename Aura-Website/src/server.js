@@ -71,30 +71,28 @@ app.get('/previous-collections', (req, res) => {
             console.error("Error fetching collections: ", err);
             return res.status(500).json({ error: "Database query failed"})
         }
-        console.log(results);
         res.json(results);
     })
 });
 
-app.get('/', (req, res) => {
-    const sql = `SELECT * FROM AuraOrders ORDER BY id ASC`;
-    db.query(sql, (err, results) => {
+app.get('/specific-collection/:collection', (req, res) => {
+    const collection_name = req.params.collection; 
+    const sql = `SELECT * FROM auraclothes WHERE collection_name = ? ORDER BY id ASC`;
+    
+    db.query(sql, [collection_name], (err, results) => {
         if (err) {
             console.error('Error retrieving data:', err);
             res.status(500).json({ error: 'Error retrieving data' });
             return;
         }
-        console.log(results);
+
         if (results.length === 0) {
             console.log('No data found');
             res.status(404).json({ error: 'No data found' });
             return;
         }
-        results.forEach(order => {
-            order.productNames = JSON.parse(order.productNames);
-        });
+
         res.json(results);
-        console.log(results);
     });
 });
 
