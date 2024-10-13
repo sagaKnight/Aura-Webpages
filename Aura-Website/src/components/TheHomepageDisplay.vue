@@ -47,8 +47,8 @@
         <h1>Previous Releases.</h1>
         <div class="row d-flex justify-content-center m-1">
           <div v-for="(collection, index) in collections" :key="index" class="col-6">
-            <h3>{{ collection.title[0].toUpperCase() + collection.title.slice(1)}}</h3>
-            <RouterLink :to="`/collection/${collection.title}`">
+            <h3>{{ collection.collectionHeading }}</h3>
+            <RouterLink :to="`/collection/${collection.collectionName}`">
               <img
                 :src="getThumbnailSrc(collection)"
                 :alt="`${collection.title} image`"

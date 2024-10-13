@@ -43,7 +43,11 @@ const store = createStore({
         return state.cart.length;
     },
     cartTotalPrice(state) {
-      return state.cart.reduce((totalPrice, productObject) => totalPrice + productObject.item.itemPrice, 0);
+      const totalPrice = state.cart.reduce((total, productObject) => {
+        return total + parseFloat(productObject.item.itemPrice);
+    }, 0);
+
+      return totalPrice.toFixed(2);
     }
   },
   //Using Vuex Persistence Plugin. 

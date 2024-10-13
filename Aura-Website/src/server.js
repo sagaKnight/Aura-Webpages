@@ -65,7 +65,7 @@ app.get('/receipt', (req, res) => {
 
 // Get collections for homepage function. Max last 6 by id
 app.get('/previous-collections', (req, res) => {
-    const sql = `SELECT id,title,thumbnail,available FROM collections ORDER BY id DESC LIMIT 6`;
+    const sql = `SELECT collectionHeading, thumbnail, collectionName, availableBtn FROM auracollections ORDER BY created_at DESC LIMIT 6`;
     db.query(sql, (err, results) => {
         if (err) {
             console.error("Error fetching collections: ", err);
@@ -75,10 +75,10 @@ app.get('/previous-collections', (req, res) => {
     })
 });
 
-app.get('/specific-collection/:collection', (req, res) => {
+app.get('/specific-items/:collection', (req, res) => {
     const collection_name = req.params.collection; 
-    const sql = `SELECT * FROM auraclothes WHERE collection_name = ? ORDER BY id ASC`;
-    
+    const sql = `SELECT * FROM auraitems WHERE collectionName = ?`;
+
     db.query(sql, [collection_name], (err, results) => {
         if (err) {
             console.error('Error retrieving data:', err);
@@ -91,7 +91,28 @@ app.get('/specific-collection/:collection', (req, res) => {
             res.status(404).json({ error: 'No data found' });
             return;
         }
+        
+        res.json(results);
+    });
+});
 
+app.get('/specific-collection/:collection', (req, res) => {
+    const collection_name = req.params.collection; 
+    const sql = `SELECT * FROM auracollections WHERE collectionName = ?`;
+
+    db.query(sql, [collection_name], (err, results) => {
+        if (err) {
+            console.error('Error retrieving data:', err);
+            res.status(500).json({ error: 'Error retrieving data' });
+            return;
+        }
+
+        if (results.length === 0) {
+            console.log('No data found');
+            res.status(404).json({ error: 'No data found' });
+            return;
+        }
+        console.log(results);
         res.json(results);
     });
 });

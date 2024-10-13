@@ -49,17 +49,17 @@
               <RouterLink
                 v-for="collection in availableCollection"
                 class="dropdown-item"
-                :to="`/collection/${collection.title}`"
+                :to="`/collection/${collection.collectionName}`"
               >
-                {{ collection.title[0].toUpperCase() + collection.title.slice(1) }}
+                {{ collection.collectionName[0].toUpperCase() + collection.collectionName.slice(1) }}
               </RouterLink>
               <div class="dropdown-divider"></div>
               <RouterLink
                 v-for="collection in notAvailableCollection"
                 class="dropdown-item"
-                :to="`/collection/${collection.title}`"
+                :to="`/collection/${collection.collectionName}`"
               >
-                {{ collection.title[0].toUpperCase() + collection.title.slice(1) }}
+                {{ collection.collectionName[0].toUpperCase() + collection.collectionName.slice(1) }}
               </RouterLink>
             </div>
           </li>
@@ -115,10 +115,10 @@ export default {
       return this.$store.getters.cartTotalItems;
     },
     availableCollection() {
-        return this.collections.filter(collection => collection.available === 1);
+        return this.collections.filter(collection => collection.availableBtn == "Available");
     },
     notAvailableCollection() {
-        return this.collections.filter(collection => collection.available === 0);
+        return this.collections.filter(collection => collection.availableBtn == "Not Available");
     }
   },
   methods: {

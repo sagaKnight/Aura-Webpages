@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div v-if="collectionJSON">
-            <div v-for="(content, index) in collectionJSON" :key="index">
+        <div v-if="collectionData">
+            <div v-for="(content, index) in collectionData" :key="index">
                 <div class="container text-center">
                     <div class="row mt-3 d-flex justify-content-center align-items-center mb-1">
                         <div class="col-8 col-xl-5 col-lg-6 col-md-7 col-sm-7">
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="row d-flex justify-content-center">
-                        <div v-for="item in content.items" class="col-8 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div v-for="item in itemsData" class="col-8 col-xl-3 col-lg-3 col-md-6 col-sm-6">
                             <!-- Open Modal Item which sends the item as an argument.
                                     Vue will always reference the same first item,if not 
                                     told otherwise. 
@@ -106,6 +106,7 @@ export default {
         return {
             collectionName: this.$route.params.collection,
             collectionData: null,
+            itemsData: null,
             modalItem: {
                 itemName: '',
                 itemPrice: '',
@@ -126,13 +127,15 @@ export default {
         //Necessary to watch the route object change when user changes pages.
         '$route'(to) {
             this.collectionName = to.params.collection;
+            this.fetchItemsData();
+            this.fetchCollectionData();
         },
+
     },
-    mounted() {
-        this.selectedSize = ''
-    },
-    created() {
-        this.fetchCollectionData();
+    async mounted() {
+        this.selectedSize = '',
+        await this.fetchCollectionData();
+        await this.fetchItemsData();
     },
     methods: {
         /*Convulted way to get local images. 
@@ -147,7 +150,15 @@ export default {
             const response = await fetch(`http://localhost:3000/specific-collection/${collectionName}`);
             if (response.ok) {
                 this.collectionData = await response.json();
-                console.log('Fetched data:', this.collectionData); 
+            } else {
+                console.error('Error fetching data:', response.status);
+            }
+        },
+        async fetchItemsData() {
+            const collectionName = this.$route.params.collection;
+            const response = await fetch(`http://localhost:3000/specific-items/${collectionName}`);
+            if (response.ok) {
+                this.itemsData = await response.json();
             } else {
                 console.error('Error fetching data:', response.status);
             }

@@ -33,7 +33,7 @@
                 </div>
                 <div class="modal-footer row">
                         <div class="col-3" v-if="cartTotalItems > 0">
-                            <h6>Total Price: ${{ cartTotalPrice }} USD</h6>
+                            <h6>Total: ${{ cartTotalPrice }} USD</h6>
                         </div>
                             <div class="col-12 col-sm-12">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
