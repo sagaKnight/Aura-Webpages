@@ -63,8 +63,20 @@ app.get('/receipt', (req, res) => {
     });
 });
 
-// Get all orders function.
-app.get('/orders', (req, res) => {
+// Get collections for homepage function. Max last 6 by id
+app.get('/previous-collections', (req, res) => {
+    const sql = `SELECT id,title,thumbnail,available FROM collections ORDER BY id DESC LIMIT 6`;
+    db.query(sql, (err, results) => {
+        if (err) {
+            console.error("Error fetching collections: ", err);
+            return res.status(500).json({ error: "Database query failed"})
+        }
+        console.log(results);
+        res.json(results);
+    })
+});
+
+app.get('/', (req, res) => {
     const sql = `SELECT * FROM AuraOrders ORDER BY id ASC`;
     db.query(sql, (err, results) => {
         if (err) {
@@ -82,6 +94,7 @@ app.get('/orders', (req, res) => {
             order.productNames = JSON.parse(order.productNames);
         });
         res.json(results);
+        console.log(results);
     });
 });
 
