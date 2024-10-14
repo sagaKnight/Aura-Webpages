@@ -51,7 +51,10 @@
                 class="dropdown-item"
                 :to="`/collection/${collection.collectionName}`"
               >
-                {{ collection.collectionName[0].toUpperCase() + collection.collectionName.slice(1) }}
+                {{
+                  collection.collectionName[0].toUpperCase() +
+                  collection.collectionName.slice(1)
+                }}
               </RouterLink>
               <div class="dropdown-divider"></div>
               <RouterLink
@@ -59,7 +62,10 @@
                 class="dropdown-item"
                 :to="`/collection/${collection.collectionName}`"
               >
-                {{ collection.collectionName[0].toUpperCase() + collection.collectionName.slice(1) }}
+                {{
+                  collection.collectionName[0].toUpperCase() +
+                  collection.collectionName.slice(1)
+                }}
               </RouterLink>
             </div>
           </li>
@@ -81,10 +87,12 @@
               <RouterLink to="/shipping" class="dropdown-item"
                 >Shipping</RouterLink
               >
-              <RouterLink to="/login" class="dropdown-item"
+            </div>
+          </li>
+          <li class="nav-link">
+            <RouterLink to="/login" class="dropdown-item"
                 >Staff Login</RouterLink
               >
-            </div>
           </li>
         </ul>
       </div>
@@ -115,11 +123,15 @@ export default {
       return this.$store.getters.cartTotalItems;
     },
     availableCollection() {
-        return this.collections.filter(collection => collection.availableBtn == "Available");
+      return this.collections.filter(
+        (collection) => collection.availableBtn == "Available"
+      );
     },
     notAvailableCollection() {
-        return this.collections.filter(collection => collection.availableBtn == "Not Available");
-    }
+      return this.collections.filter(
+        (collection) => collection.availableBtn == "Not Available"
+      );
+    },
   },
   methods: {
     async fetchCollections() {
