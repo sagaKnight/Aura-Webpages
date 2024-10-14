@@ -28,16 +28,15 @@ db.connect((err) => {
 });
 
 //Post Function 
-app.post('/submit-form', (req, res) => {
-    const { email, fName, lName, pNumber, address, aptNumber, city, state, country, zip, gift, productNames } = req.body;
-    const sql = `INSERT INTO AuraOrders (email, fName, lName, pNumber, address, aptNumber, city, state, country, zip, gift, productNames) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
-    db.query(sql, [email, fName, lName, pNumber, address, aptNumber, city, state, country, zip, gift, productNames], (err, result) => {
+app.post('/submit-order', (req, res) => {
+    const { email, fName, lName, pNumber, address, aptNumber, city, state, country, zip, gift, productNames, amountPaid } = req.body;
+    const sql = `INSERT INTO AuraOrders (email, fName, lName, pNumber, address, aptNumber, city, state, country, zip, gift, productNames, amountPaid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+    db.query(sql, [email, fName, lName, pNumber, address, aptNumber, city, state, country, zip, gift, productNames, amountPaid], (err, result) => {
         if (err) {
             console.error('Error inserting data:', err);
             res.status(500).send('Error submitting the form');
             return;
         }
-        console.log(req.body);
         res.status(200).send('Form submitted successfully!');
     });
 });
@@ -51,7 +50,7 @@ app.get('/receipt', (req, res) => {
             res.status(500).json({ error: 'Error retrieving data' });
             return;
         }
-        console.log(result);
+
         if (result.length === 0) {
             console.log('No data found');
             res.status(404).json({ error: 'No data found' });
@@ -112,11 +111,36 @@ app.get('/specific-collection/:collection', (req, res) => {
             res.status(404).json({ error: 'No data found' });
             return;
         }
-        console.log(results);
+
         res.json(results);
     });
 });
 
+app.get('/orders', (req, res) => {
+    const sql = `SELECT * FROM auraorders ORDER BY id DESC`;
+    db.query(sql, (err, results) => {
+        if (err) {
+            console.error("Error fetching collections: ", err);
+            return res.status(500).json({ error: "Database query failed"})
+        }
+
+        res.json(results);
+    })
+});
+
+app.delete('/orderDelete/:id', async (req, res) => {
+    const orderId = req.params.id; 
+    try {
+      const [result] = await pool.execute('DELETE FROM auraorders WHERE id = ?', [orderId]);
+      if (result.affectedRows === 0) {
+        return res.status(404).json({ message: 'Order not found' });
+      }
+      res.status(200).json({ message: 'Order deleted successfully' });
+    } catch (error) {
+      console.error('Error deleting the order:', error);
+      res.status(500).json({ message: 'Error deleting the order', error });
+    }
+})
 
 
 app.listen(port);

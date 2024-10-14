@@ -251,7 +251,7 @@ export default {
                         selectedSize: productObject.selectedSize
                     }));
                     
-                    const response = await axios.post('http://localhost:3000/submit-form', {
+                    const response = await axios.post('http://localhost:3000/submit-order', {
                         productNames: JSON.stringify(productNames),
                         email: this.email,
                         fName: this.fName,
@@ -263,7 +263,8 @@ export default {
                         state: this.state,
                         country: this.country,
                         zip: this.zip,
-                        gift: this.gift
+                        gift: this.gift,
+                        amountPaid: this.cartTotalPrice
                     });
                     this.clearCart();
                     this.$store.commit('orderInformation', response.data)
