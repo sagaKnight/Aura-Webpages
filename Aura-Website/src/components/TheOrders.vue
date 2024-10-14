@@ -22,7 +22,7 @@
           <p>Gift: {{ order.gift === "1" ? "Yes" : "No" }}</p>
           <p>Amount Paid: ${{ order.amountPaid }} USD</p>
         </div>
-        <div class="col-6">
+        <div class="col-5">
           <h3>Items:</h3>
           <ul>
             <li
@@ -32,6 +32,11 @@
               {{ product.itemName }} - Size: {{ product.selectedSize }}
             </li>
           </ul>
+        </div>
+        <div class="col-1">
+          <button class="btn btn-danger" @click="deleteOrder(order.id)">
+            Delete
+          </button>
         </div>
       </div>
     </div>
@@ -65,6 +70,22 @@ export default {
           productDetails: JSON.parse(order.productNames),
         };
       });
+    },
+  },
+  methods: {
+    async deleteOrder(orderId) {
+      try {
+        const response = await axios.delete(
+          `http://localhost:3000/orders/${orderId}`
+        );
+        if ((response.status === 200)) {
+            this.orders = this.orders.filter((order) => order.id !== orderId); 
+            window.alert("Order ID: " + orderId + " Deleted Successfully");
+        }
+      } catch (error) {
+        console.error("Error deleting order:", error);
+        alert("An error occurred while deleting the order.");
+      }
     },
   },
 };

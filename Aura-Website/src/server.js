@@ -128,19 +128,20 @@ app.get('/orders', (req, res) => {
     })
 });
 
-app.delete('/orderDelete/:id', async (req, res) => {
-    const orderId = req.params.id; 
-    try {
-      const [result] = await pool.execute('DELETE FROM auraorders WHERE id = ?', [orderId]);
-      if (result.affectedRows === 0) {
-        return res.status(404).json({ message: 'Order not found' });
+app.delete('/orders/:id', (req, res) => {
+    const orderId = req.params.id;
+    const query = 'DELETE FROM auraorders WHERE id = ?';
+  
+    db.query(query, [orderId], (err, results) => {
+      if (err) {
+        return res.status(500).json({ error: 'Database query failed' });
+      }
+      if (results.affectedRows === 0) {
+        return res.status(404).json({ error: 'Order not found' });
       }
       res.status(200).json({ message: 'Order deleted successfully' });
-    } catch (error) {
-      console.error('Error deleting the order:', error);
-      res.status(500).json({ message: 'Error deleting the order', error });
-    }
-})
+    });
+  });  
 
 
 app.listen(port);

@@ -99,7 +99,6 @@
 </template>
 
 <script>
-import data from '../components/data.json'
 
 export default {
     data() {

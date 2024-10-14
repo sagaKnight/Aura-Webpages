@@ -7,7 +7,7 @@
             <RouterLink to="/orders">
                 <button class="btn btn-primary btn-lg">Orders</button>
             </RouterLink>
-            <RouterLink to="/">
+            <RouterLink to="/edit-collection">
                 <button class="btn btn-secondary btn-lg">Edit Collection</button>
             </RouterLink>
         </div>

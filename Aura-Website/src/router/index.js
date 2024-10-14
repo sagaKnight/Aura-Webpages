@@ -9,6 +9,7 @@ import ReceiptView from '../views/ReceiptView.vue'
 import store from '../store.js'
 import ManagerView from '../views/ManagerView.vue'
 import OrdersView from '@/views/OrdersView.vue'
+import CollectionEditView from '@/views/CollectionEditView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -72,6 +73,11 @@ const router = createRouter({
       path:'/orders',
       name: 'orders',
       component: OrdersView
+    },
+    {
+      path: '/edit-collection',
+      name: 'edit-collection',
+      component: CollectionEditView
     }
   ],
 })
