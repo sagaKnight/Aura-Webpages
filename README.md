@@ -2,15 +2,24 @@
 
 <p>Aura is a full-stack fashion website which allows users to simulate purchasing clothes from popular streetwear brands. The website follows mobile-first principles and a minimalist design.</p> 
 
-<ul>
-    <li>Uses an integrated shopping cart which is persistent and saves when page is refreshed.</li>
-    <li>Responsive website design with a focus on mobile-friendly design.</li>
-    <li>Dynamic content which retrieves information from a MySQL database.</li>
-</ul>
+## Interactive Features
 
-<!-- Images here for description -->
+#### Integrated Shopping Cart
+<p>Users are able to add items to their cart and maintain their selections across page refreshes (Vuex Persisted State).</p>
 
-#### Technologies Used
+#### Responsive Design
+<p>Ensures optimal viewing and interaction on mobile devices, enhancing user experience across various screen sizes (Bootstrap).</p>
+
+#### Dynamic Content Retrieval
+<p>Information is dynamic and fetched from a MySQL database, allowing for changes to product listings and availability (MySQL, Node.js).</p>
+
+#### Order Management Page
+<p>Staff can view and manage customer orders directly from the SQL database, allowing for order tracking.</p>
+
+#### Order Processing
+<p>When users complete their purchases, the order details are uploaded to the MySQL database.</p>
+
+## Technologies Used
 
 <ul>
     <li><strong>Frontend:</strong>
@@ -84,3 +93,6 @@
         <p>Open your web browser and go to <code>http://localhost:5173/</code> to view the website.</p>
     </li>
 </ol>
+
+
+
