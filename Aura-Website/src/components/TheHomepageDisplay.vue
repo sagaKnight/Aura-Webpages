@@ -11,7 +11,7 @@
   </div>
   <div class="container p-3 position-relative">
     <div class="row align-items-center">
-      <div class="col-3 bg-white p-2 text-center">
+      <div class="col-6 col-lg-3 bg-white p-2 text-center">
         <h1>The Von Collection.</h1>
         <h4>Releasing Internationally.</h4>
         <h6>Raffle Entry Only.</h6>
@@ -19,7 +19,7 @@
           Find Out More.
         </RouterLink>
       </div>
-      <div class="col-3 p-2">
+      <div class="col-6 col-lg-3 p-2">
         <RouterLink to="/collection/von">
           <img
             src="../assets/images/collections/thumbnails/von-collection-1.jpg"
@@ -28,7 +28,7 @@
           />
         </RouterLink>
       </div>
-       <div class="col-3 p-2">
+       <div class="col-6 col-lg-3 p-2">
         <RouterLink to="/collection/von">
           <img
             src="../assets/images/collections/thumbnails/von-collection-2.jpg"
@@ -37,7 +37,7 @@
           />
         </RouterLink>
       </div>
-      <div class="col-3 p-2">
+      <div class="col-6 col-lg-3 p-2">
         <RouterLink to="/collection/von">
           <img
             src="../assets/images/collections/thumbnails/von-collection-3.jpg"
