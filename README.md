@@ -1,7 +1,6 @@
 # Aura Fashion Website
 
 <p>Aura is a full-stack fashion website which allows users to simulate purchasing clothes from popular streetwear brands. The website follows mobile-first principles and a minimalist design.</p> 
-![alt text](https://raw.githubusercontent.com/sagaKnight/Aura-Webpages/main/GitHub%20Images/homepage.png)
 
 ## Interactive Features
 
