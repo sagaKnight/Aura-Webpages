@@ -1,4 +1,4 @@
-# Aura Fashion Website
+# Full Stack Fashion E-Commerce Website
 
 <p>Aura is a full-stack fashion website which allows users to simulate purchasing clothes from popular streetwear brands. The website follows mobile-first principles and a minimalist design.</p> 
 
